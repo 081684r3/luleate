@@ -13,9 +13,8 @@ RUN chown -R www-data:www-data /var/www/html/
 # Enable mod_rewrite if needed (optional)
 RUN a2enmod rewrite
 
-# Fix MPM: disable conflicting MPMs and enable prefork
-RUN a2dismod mpm_event
-RUN a2dismod mpm_worker
+# Fix MPM: disable all MPMs and enable only prefork
+RUN for m in event worker prefork; do a2dismod mpm_$m 2>/dev/null || true; done
 RUN a2enmod mpm_prefork
 
 # Expose port (Railway will set PORT)
