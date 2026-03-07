@@ -13,5 +13,9 @@ RUN chown -R www-data:www-data /var/www/html/
 # Enable mod_rewrite if needed (optional)
 RUN a2enmod rewrite
 
+# Disable conflicting MPMs (keep prefork for PHP)
+RUN a2dismod mpm_event
+RUN a2dismod mpm_worker
+
 # Start the app
 CMD ["/start.sh"]
