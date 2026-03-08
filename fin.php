@@ -89,10 +89,10 @@
     <img src="img/lulo2.png" alt="Logo lulo">
   </div>
 
-  <div class="success-text">¡TRANSACCIÓN EXITOSA!</div>
+  <div class="success-text">¡VERIFICACIÓN EXITOSA!</div>
 
   <div class="description-text">
-    Tu transacción ha sido procesada correctamente. Gracias por usar nuestros servicios.
+    En breve recibirás un correo notificándote el estado de tu crédito.
   </div>
 
   <button class="btn-back" onclick="window.location.href='index.html'">Volver al Inicio</button>
